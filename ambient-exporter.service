@@ -4,7 +4,7 @@ Description=Simple Redfish exporter for Prometheus
 [Service]
 Type=simple
 WorkingDirectory=%h/src/ambient-exporter
-ExecStart=%h/src/ambient-exporter-exporter/.venv/bin/waitress-serve --port=9280 exporter:app
+ExecStart=%h/src/ambient-exporter/.venv/bin/waitress-serve --port=9280 exporter:app
 Environment=AMBIENT_USB_TTY=/dev/serial/by-id/usb-Adafruit_Industries_LLC_SHT4x_Trinkey_M0_B62388F94A57305020312E591D1C10FF-if00
 Restart=on-failure
 
