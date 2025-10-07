@@ -26,12 +26,14 @@ class ReadThread(Thread):
 
     def _read_port(self):
         try:
+            app.logger.info("opening tty %s", TTY)
             tty = serial.Serial(TTY, timeout=60)
         except Exception as e:
             app.logger.error("cannot connect to TTY: %s", e)
 
         try:
             while line := tty.readline():
+                app.logger.debug("received line: %s", line)
                 line = line.decode()
                 if re.match(r'^# BEGIN READOUT', line, re.IGNORECASE):
                     with rb_lock:
@@ -46,7 +48,7 @@ class ReadThread(Thread):
 @app.route("/metrics")
 def metrics():
     with rb_lock:
-        return "".join(f"{rbl}\n" for rbl in result_buffer)
+        return "".join(f"{rbl}" for rbl in result_buffer)
 
 reader = ReadThread(daemon=True)
-reader.start
+reader.start()
