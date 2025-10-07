@@ -6,8 +6,8 @@ import time
 import board
 import os
 import adafruit_sht4x
-from microcontroller import watchdog
-from watchdog import WatchDogMode
+# from microcontroller import watchdog
+# from watchdog import WatchDogMode
 
 i2c = board.I2C()  # uses board.SCL and board.SDA
 sht = adafruit_sht4x.SHT4x(i2c)
@@ -21,8 +21,8 @@ os_info = os.uname()
 print(os_info)
 ident = f'{{board="{board.board_id}",sysname="{os_info.sysname}",boardname="{os_info.nodename}"}}'
 
-watchdog.mode = WatchDogMode.RESET
-watchdog.timeout = 20
+# watchdog.mode = WatchDogMode.RESET
+# watchdog.timeout = 20
 
 while True:
     temperature, relative_humidity = sht.measurements
@@ -31,5 +31,5 @@ while True:
     print(f'ambient_temperature_celcius{ident} {temperature}')
     print('# TYPE humidity_percent gauge')
     print(f'humidity_percent{ident} {relative_humidity}')
-    watchdog.feed()
+    # watchdog.feed()
     time.sleep(5)
