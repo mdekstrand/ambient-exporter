@@ -47,3 +47,6 @@ class ReadThread(Thread):
 def metrics():
     with rb_lock:
         return "".join(f"{rbl}\n" for rbl in result_buffer)
+
+reader = ReadThread(daemon=True)
+reader.start
