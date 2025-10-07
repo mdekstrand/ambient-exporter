@@ -1,0 +1,17 @@
+[project]
+name = "simple-redfish-exporter"
+version = "0.1.0"
+description = "Barebones, basic-auth exporter for Redfish power metrics."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "Flask~=3.1",
+  "pyserial>=3.5",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.1",
+    "uv>=0.5.6",
+]
+
