@@ -3,9 +3,9 @@ Description=Simple Redfish exporter for Prometheus
 
 [Service]
 Type=simple
-WorkingDirectory=%h/src/simple-redfish-exporter
-ExecStart=%h/src/simple-redfish-exporter/.venv/bin/waitress-serve exporter:app
-Environment=IKVM_HOST=192.168.1.202
+WorkingDirectory=%h/src/ambient-exporter
+ExecStart=%h/src/ambient-exporter-exporter/.venv/bin/waitress-serve exporter:app
+Environment=AMBIENT_USB_TTY=/dev/serial/by-id/usb-Adafruit_Industries_LLC_SHT4x_Trinkey_M0_B62388F94A57305020312E591D1C10FF-if00
 Restart=on-failure
 
 [Install]

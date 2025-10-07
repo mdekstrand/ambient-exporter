@@ -175,6 +175,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "flask" },
     { name = "pyserial" },
+    { name = "waitress" },
 ]
 
 [package.dev-dependencies]
@@ -187,6 +188,7 @@ dev = [
 requires-dist = [
     { name = "flask", specifier = "~=3.1" },
     { name = "pyserial", specifier = ">=3.5" },
+    { name = "waitress", specifier = ">=3.0.2" },
 ]
 
 [package.metadata.requires-dev]
@@ -219,6 +221,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d4/8e/53d36dbe52c432457307381c5895f0d2f4809decc30991a71b3671f26041/uv-0.8.24-py3-none-win32.whl", hash = "sha256:c0089dacd349d054689da0391f67f655288bb1b4c402a40e6a4599354d22f21d", size = 19343695, upload-time = "2025-10-07T03:34:10.217Z" },
     { url = "https://files.pythonhosted.org/packages/aa/d1/12d251ecd36aea66ddfa1431b61c4782b2905ecbf188bbffd5aee8f5ceef/uv-0.8.24-py3-none-win_amd64.whl", hash = "sha256:59d2527b9afdd89361d057b0c8077fca3212e7335df46532bf9057c6fc5eb9ff", size = 21370118, upload-time = "2025-10-07T03:34:13.72Z" },
     { url = "https://files.pythonhosted.org/packages/65/40/839b2987cf4045c13f4c4946a136797871fd7968f75b7f866978ceea59b8/uv-0.8.24-py3-none-win_arm64.whl", hash = "sha256:712af0dcb2e1522b85e168e10a1dcb9fe5775e81cee632d8a6d7e95054a096f3", size = 19803089, upload-time = "2025-10-07T03:34:17.307Z" },
+]
+
+[[package]]
+name = "waitress"
+version = "3.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bf/cb/04ddb054f45faa306a230769e868c28b8065ea196891f09004ebace5b184/waitress-3.0.2.tar.gz", hash = "sha256:682aaaf2af0c44ada4abfb70ded36393f0e307f4ab9456a215ce0020baefc31f", size = 179901, upload-time = "2024-11-16T20:02:35.195Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/57/a27182528c90ef38d82b636a11f606b0cbb0e17588ed205435f8affe3368/waitress-3.0.2-py3-none-any.whl", hash = "sha256:c56d67fd6e87c2ee598b76abdd4e96cfad1f24cacdea5078d382b1f9d7b5ed2e", size = 56232, upload-time = "2024-11-16T20:02:33.858Z" },
 ]
 
 [[package]]
