@@ -27,9 +27,9 @@ ident = f'{{board="{board.board_id}",sysname="{os_info.sysname}",boardname="{os_
 while True:
     temperature, relative_humidity = sht.measurements
     print('# BEGIN READOUT')
-    print('# TYPE ambient_temperature_celcius guage')
+    print('# TYPE ambient_temperature_celcius gauge')
     print(f'ambient_temperature_celcius{ident} {temperature}')
-    print('# TYPE humidity_percent guage')
+    print('# TYPE humidity_percent gauge')
     print(f'humidity_percent{ident} {relative_humidity}')
     # watchdog.feed()
     time.sleep(5)
