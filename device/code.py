@@ -30,6 +30,6 @@ while True:
     print('# TYPE ambient_temperature_celcius gauge')
     print(f'ambient_temperature_celcius{ident} {temperature}')
     print('# TYPE humidity_percent gauge')
-    print(f'humidity_percent{ident} {relative_humidity}')
+    print(f'ambient_humidity_percent{ident} {relative_humidity}')
     # watchdog.feed()
     time.sleep(5)
