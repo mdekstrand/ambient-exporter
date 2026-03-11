@@ -34,7 +34,7 @@ class ReadThread(Thread):
         try:
             while line := tty.readline():
                 app.logger.debug("received line: %s", line)
-                line = line.decode()
+                line = line.decode().strip()
                 if re.match(r'^# BEGIN READOUT', line, re.IGNORECASE):
                     with rb_lock:
                         result_buffer.clear()
