@@ -1,5 +1,5 @@
 [Unit]
-Description=Simple Redfish exporter for Prometheus
+Description=Simple environment exporter for Prometheus
 
 [Service]
 Type=simple
